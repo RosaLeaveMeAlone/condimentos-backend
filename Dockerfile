@@ -53,9 +53,6 @@ WORKDIR /var/www/html
 
 RUN composer install
 
-RUN php artisan config:cache
-
-RUN php artisan cache:clear
 
 # RUN php artisan install:broadcasting
 
