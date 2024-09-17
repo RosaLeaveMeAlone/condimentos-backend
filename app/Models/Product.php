@@ -72,7 +72,7 @@ class Product extends Model
 
         if ($categoryId) {
             $query->whereHas(
-                'subcategories.category',
+                'category',
                 fn ($query) => $query->where('categories.id', $categoryId)
             );
         }
