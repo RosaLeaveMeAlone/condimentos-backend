@@ -6,44 +6,35 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Product extends Model
+class Cart extends Model
 {
-    use HasFactory, SoftDeletes;
+    use HasFactory;
 
     protected $fillable = [
-        'name',
-        'description',
-        'image',
-        'unit_availability',
-        'unit_price',
-        'unit_discount_quantity',
-        'unit_discount_price',
-        'weight_availability',
-        'weight_price',
-        'weight_discount_quantity',
-        'weight_discount_price',
-        'unit_name',
-        'is_available',
-        'category_id',
+        'token',
+        'is_closed',
     ];
+
+    /**
+     * Get the route key for the model.
+     *
+     * @return string
+     */
+    public function getRouteKeyName()
+    {
+        return 'token';
+    }
 
     // -----------------------------------------------------------------------------------------------------------------
     // @ Relations
     // -----------------------------------------------------------------------------------------------------------------
-
-    public function category()
+    public function products()
     {
-        return $this->belongsTo(Category::class);
-    }
-
-    public function carts()
-    {
-        return $this->belongsToMany(Cart::class)
+        return $this->belongsToMany(Product::class)
             ->withPivot('quantity', 'is_unit')
             ->using(CartProduct::class)
             ->withTimestamps();
     }
-
     // -----------------------------------------------------------------------------------------------------------------
     // @ Accessors & Mutators
     // -----------------------------------------------------------------------------------------------------------------
@@ -64,25 +55,15 @@ class Product extends Model
         $search = null,
         $orderByAttribute = 'id',
         $orderByDirection = 'ASC',
-        $categoryId = null,
     ) {
         $query = static::query();
 
-        $query->with(['category']);
-
         if ($search) {
-            $query->where(
-                fn ($query) => $query
-                    ->where('products.name', 'ILIKE', "%$search%")
-                    ->orWhere('products.description', 'ILIKE', "%$search%")
-            );
-        }
-
-        if ($categoryId) {
-            $query->whereHas(
-                'category',
-                fn ($query) => $query->where('categories.id', $categoryId)
-            );
+            // $query->where(
+            //     fn ($query) => $query
+            //         ->where('products.name', 'ILIKE', "%$search%")
+            //         ->orWhere('products.description', 'ILIKE', "%$search%")
+            // );
         }
 
         // sorting
