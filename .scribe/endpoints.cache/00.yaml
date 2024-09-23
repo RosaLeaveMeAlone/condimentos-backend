@@ -35,7 +35,7 @@ endpoints:
         name: email
         description: ''
         required: true
-        example: non
+        example: et
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -44,14 +44,14 @@ endpoints:
         name: password
         description: ''
         required: true
-        example: aut
+        example: expedita
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      email: non
-      password: aut
+      email: et
+      password: expedita
     fileParameters: []
     responses: []
     responseFields: []

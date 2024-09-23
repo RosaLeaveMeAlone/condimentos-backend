@@ -5,7 +5,7 @@ info:
   version: 1.0.0
 servers:
   -
-    url: 'http://localhost'
+    url: 'https://condimentos.joel-uzcategui.com'
 paths:
   /api/auth/login:
     post:
@@ -26,11 +26,11 @@ paths:
                 email:
                   type: string
                   description: ''
-                  example: non
+                  example: et
                 password:
                   type: string
                   description: ''
-                  example: aut
+                  example: expedita
               required:
                 - email
                 - password
@@ -146,15 +146,15 @@ paths:
                 product_id:
                   type: integer
                   description: ''
-                  example: 14
+                  example: 13
                 quantity:
                   type: number
                   description: ''
-                  example: 1.53273
+                  example: 220520154.43386
                 is_unit:
                   type: boolean
                   description: ''
-                  example: true
+                  example: false
               required:
                 - product_id
                 - quantity
@@ -272,7 +272,7 @@ paths:
                 category_id:
                   type: string
                   description: ''
-                  example: nam
+                  example: placeat
       security: []
     post:
       summary: 'Create Product'
@@ -292,15 +292,15 @@ paths:
                 name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: fot
+                  example: oljmcbpnbyufwburrgxk
                 description:
                   type: string
                   description: ''
-                  example: 'Qui facere et harum quo accusamus officiis et.'
+                  example: 'Reiciendis explicabo laboriosam numquam incidunt.'
                 image:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: jyestftspzqmcokcxflulpsku
+                  example: wehihgijzkvndavrsmv
                 unit_availability:
                   type: boolean
                   description: ''
@@ -308,15 +308,15 @@ paths:
                 unit_price:
                   type: number
                   description: 'This field is required when <code>unit_availability</code> is <code>true</code>. Must be at least 0.'
-                  example: 13
+                  example: 62
                 unit_discount_quantity:
                   type: integer
                   description: 'This field is required when <code>unit_availability</code> is <code>true</code>. Must be at least 1.'
-                  example: 6
+                  example: 31
                 unit_discount_price:
                   type: number
                   description: 'This field is required when <code>unit_availability</code> is <code>true</code>. Must be at least 0.'
-                  example: 67
+                  example: 73
                 weight_availability:
                   type: boolean
                   description: ''
@@ -324,19 +324,19 @@ paths:
                 weight_price:
                   type: number
                   description: 'This field is required when <code>weight_availability</code> is <code>true</code>. Must be at least 0.'
-                  example: 4
+                  example: 26
                 weight_discount_quantity:
                   type: integer
                   description: 'This field is required when <code>weight_availability</code> is <code>true</code>. Must be at least 1.'
-                  example: 79
+                  example: 25
                 weight_discount_price:
                   type: number
                   description: 'This field is required when <code>weight_availability</code> is <code>true</code>. Must be at least 0.'
-                  example: 21
+                  example: 18
                 unit_name:
                   type: string
                   description: 'This field is required when <code>unit_availability</code> is <code>true</code>. Must not be greater than 255 characters.'
-                  example: rlrtwsdh
+                  example: ugrydjrurujuuujjluxh
                 is_available:
                   type: boolean
                   description: ''
@@ -344,7 +344,7 @@ paths:
                 category_id:
                   type: string
                   description: ''
-                  example: distinctio
+                  example: id
               required:
                 - name
                 - image
@@ -489,15 +489,15 @@ paths:
                 name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: mcxgpxjjek
+                  example: wej
                 description:
                   type: string
                   description: ''
-                  example: 'Delectus aut placeat minus beatae.'
+                  example: 'Consectetur sed nihil voluptatem fuga earum voluptatibus.'
                 image:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: mdoryleuertvpziynta
+                  example: cottjuznrkmnd
                 unit_availability:
                   type: boolean
                   description: ''
@@ -505,15 +505,15 @@ paths:
                 unit_price:
                   type: number
                   description: 'This field is required when <code>unit_availability</code> is <code>true</code>. Must be at least 0.'
-                  example: 56
+                  example: 80
                 unit_discount_quantity:
                   type: integer
                   description: 'This field is required when <code>unit_availability</code> is <code>true</code>. Must be at least 1.'
-                  example: 60
+                  example: 47
                 unit_discount_price:
                   type: number
                   description: 'This field is required when <code>unit_availability</code> is <code>true</code>. Must be at least 0.'
-                  example: 26
+                  example: 75
                 weight_availability:
                   type: boolean
                   description: ''
@@ -521,19 +521,19 @@ paths:
                 weight_price:
                   type: number
                   description: 'This field is required when <code>weight_availability</code> is <code>true</code>. Must be at least 0.'
-                  example: 68
+                  example: 82
                 weight_discount_quantity:
                   type: integer
                   description: 'This field is required when <code>weight_availability</code> is <code>true</code>. Must be at least 1.'
-                  example: 60
+                  example: 75
                 weight_discount_price:
                   type: number
                   description: 'This field is required when <code>weight_availability</code> is <code>true</code>. Must be at least 0.'
-                  example: 79
+                  example: 89
                 unit_name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: ihop
+                  example: edlxjxqjwjbzaegxhle
                 category_id:
                   type: string
                   description: ''

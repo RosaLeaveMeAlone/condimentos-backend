@@ -145,7 +145,7 @@
     <div class="content">
         <h1 id="introduction">Introduction</h1>
 <aside>
-    <strong>Base URL</strong>: <code>http://localhost</code>
+    <strong>Base URL</strong>: <code>https://condimentos.joel-uzcategui.com</code>
 </aside>
 <p>This documentation aims to provide all the information you need to work with our API.</p>
 <aside>As you scroll, you'll see code examples for working with the API in different programming languages in the dark area to the right (or as part of the content on mobile).
@@ -172,19 +172,19 @@ You can switch the language used with the tabs at the top right (or from the nav
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost/api/auth/login" \
+    "https://condimentos.joel-uzcategui.com/api/auth/login" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"email\": \"non\",
-    \"password\": \"aut\"
+    \"email\": \"et\",
+    \"password\": \"expedita\"
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/auth/login"
+    "https://condimentos.joel-uzcategui.com/api/auth/login"
 );
 
 const headers = {
@@ -193,8 +193,8 @@ const headers = {
 };
 
 let body = {
-    "email": "non",
-    "password": "aut"
+    "email": "et",
+    "password": "expedita"
 };
 
 fetch(url, {
@@ -283,10 +283,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="email"                data-endpoint="POSTapi-auth-login"
-               value="non"
+               value="et"
                data-component="body">
     <br>
-<p>Example: <code>non</code></p>
+<p>Example: <code>et</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>password</code></b>&nbsp;&nbsp;
@@ -294,10 +294,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="password"                data-endpoint="POSTapi-auth-login"
-               value="aut"
+               value="expedita"
                data-component="body">
     <br>
-<p>Example: <code>aut</code></p>
+<p>Example: <code>expedita</code></p>
         </div>
         </form>
 
@@ -318,14 +318,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost/api/cart" \
+    "https://condimentos.joel-uzcategui.com/api/cart" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/cart"
+    "https://condimentos.joel-uzcategui.com/api/cart"
 );
 
 const headers = {
@@ -426,14 +426,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/cart/0b3c9250-06e8-487f-bc6d-7b4a67f830cb" \
+    --get "https://condimentos.joel-uzcategui.com/api/cart/0b3c9250-06e8-487f-bc6d-7b4a67f830cb" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/cart/0b3c9250-06e8-487f-bc6d-7b4a67f830cb"
+    "https://condimentos.joel-uzcategui.com/api/cart/0b3c9250-06e8-487f-bc6d-7b4a67f830cb"
 );
 
 const headers = {
@@ -580,20 +580,20 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost/api/cart/add-product" \
+    "https://condimentos.joel-uzcategui.com/api/cart/add-product" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"product_id\": 14,
-    \"quantity\": 1.53273,
-    \"is_unit\": true
+    \"product_id\": 13,
+    \"quantity\": 220520154.43385866,
+    \"is_unit\": false
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/cart/add-product"
+    "https://condimentos.joel-uzcategui.com/api/cart/add-product"
 );
 
 const headers = {
@@ -602,9 +602,9 @@ const headers = {
 };
 
 let body = {
-    "product_id": 14,
-    "quantity": 1.53273,
-    "is_unit": true
+    "product_id": 13,
+    "quantity": 220520154.43385866,
+    "is_unit": false
 };
 
 fetch(url, {
@@ -693,10 +693,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="product_id"                data-endpoint="POSTapi-cart-add-product"
-               value="14"
+               value="13"
                data-component="body">
     <br>
-<p>Example: <code>14</code></p>
+<p>Example: <code>13</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>quantity</code></b>&nbsp;&nbsp;
@@ -704,10 +704,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="quantity"                data-endpoint="POSTapi-cart-add-product"
-               value="1.53273"
+               value="220520154.43386"
                data-component="body">
     <br>
-<p>Example: <code>1.53273</code></p>
+<p>Example: <code>220520154.43386</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>is_unit</code></b>&nbsp;&nbsp;
@@ -728,7 +728,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             <code>false</code>
         </label>
     <br>
-<p>Example: <code>true</code></p>
+<p>Example: <code>false</code></p>
         </div>
         </form>
 
@@ -745,14 +745,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost/api/cart/close-cart" \
+    "https://condimentos.joel-uzcategui.com/api/cart/close-cart" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/cart/close-cart"
+    "https://condimentos.joel-uzcategui.com/api/cart/close-cart"
 );
 
 const headers = {
@@ -857,14 +857,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/category" \
+    --get "https://condimentos.joel-uzcategui.com/api/category" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/category"
+    "https://condimentos.joel-uzcategui.com/api/category"
 );
 
 const headers = {
@@ -1011,18 +1011,18 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/product" \
+    --get "https://condimentos.joel-uzcategui.com/api/product" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"category_id\": \"nam\"
+    \"category_id\": \"placeat\"
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/product"
+    "https://condimentos.joel-uzcategui.com/api/product"
 );
 
 const headers = {
@@ -1031,7 +1031,7 @@ const headers = {
 };
 
 let body = {
-    "category_id": "nam"
+    "category_id": "placeat"
 };
 
 fetch(url, {
@@ -1136,10 +1136,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="category_id"                data-endpoint="GETapi-product"
-               value="nam"
+               value="placeat"
                data-component="body">
     <br>
-<p>Example: <code>nam</code></p>
+<p>Example: <code>placeat</code></p>
         </div>
         </form>
 
@@ -1156,14 +1156,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/product/2" \
+    --get "https://condimentos.joel-uzcategui.com/api/product/2" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/product/2"
+    "https://condimentos.joel-uzcategui.com/api/product/2"
 );
 
 const headers = {
@@ -1318,31 +1318,31 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost/api/product" \
+    "https://condimentos.joel-uzcategui.com/api/product" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"name\": \"fot\",
-    \"description\": \"Qui facere et harum quo accusamus officiis et.\",
-    \"image\": \"jyestftspzqmcokcxflulpsku\",
+    \"name\": \"oljmcbpnbyufwburrgxk\",
+    \"description\": \"Reiciendis explicabo laboriosam numquam incidunt.\",
+    \"image\": \"wehihgijzkvndavrsmv\",
     \"unit_availability\": true,
-    \"unit_price\": 13,
-    \"unit_discount_quantity\": 6,
-    \"unit_discount_price\": 67,
+    \"unit_price\": 62,
+    \"unit_discount_quantity\": 31,
+    \"unit_discount_price\": 73,
     \"weight_availability\": false,
-    \"weight_price\": 4,
-    \"weight_discount_quantity\": 79,
-    \"weight_discount_price\": 21,
-    \"unit_name\": \"rlrtwsdh\",
+    \"weight_price\": 26,
+    \"weight_discount_quantity\": 25,
+    \"weight_discount_price\": 18,
+    \"unit_name\": \"ugrydjrurujuuujjluxh\",
     \"is_available\": false,
-    \"category_id\": \"distinctio\"
+    \"category_id\": \"id\"
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/product"
+    "https://condimentos.joel-uzcategui.com/api/product"
 );
 
 const headers = {
@@ -1351,20 +1351,20 @@ const headers = {
 };
 
 let body = {
-    "name": "fot",
-    "description": "Qui facere et harum quo accusamus officiis et.",
-    "image": "jyestftspzqmcokcxflulpsku",
+    "name": "oljmcbpnbyufwburrgxk",
+    "description": "Reiciendis explicabo laboriosam numquam incidunt.",
+    "image": "wehihgijzkvndavrsmv",
     "unit_availability": true,
-    "unit_price": 13,
-    "unit_discount_quantity": 6,
-    "unit_discount_price": 67,
+    "unit_price": 62,
+    "unit_discount_quantity": 31,
+    "unit_discount_price": 73,
     "weight_availability": false,
-    "weight_price": 4,
-    "weight_discount_quantity": 79,
-    "weight_discount_price": 21,
-    "unit_name": "rlrtwsdh",
+    "weight_price": 26,
+    "weight_discount_quantity": 25,
+    "weight_discount_price": 18,
+    "unit_name": "ugrydjrurujuuujjluxh",
     "is_available": false,
-    "category_id": "distinctio"
+    "category_id": "id"
 };
 
 fetch(url, {
@@ -1453,10 +1453,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="name"                data-endpoint="POSTapi-product"
-               value="fot"
+               value="oljmcbpnbyufwburrgxk"
                data-component="body">
     <br>
-<p>Must not be greater than 255 characters. Example: <code>fot</code></p>
+<p>Must not be greater than 255 characters. Example: <code>oljmcbpnbyufwburrgxk</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>description</code></b>&nbsp;&nbsp;
@@ -1464,10 +1464,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="description"                data-endpoint="POSTapi-product"
-               value="Qui facere et harum quo accusamus officiis et."
+               value="Reiciendis explicabo laboriosam numquam incidunt."
                data-component="body">
     <br>
-<p>Example: <code>Qui facere et harum quo accusamus officiis et.</code></p>
+<p>Example: <code>Reiciendis explicabo laboriosam numquam incidunt.</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>image</code></b>&nbsp;&nbsp;
@@ -1475,10 +1475,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="image"                data-endpoint="POSTapi-product"
-               value="jyestftspzqmcokcxflulpsku"
+               value="wehihgijzkvndavrsmv"
                data-component="body">
     <br>
-<p>Must not be greater than 255 characters. Example: <code>jyestftspzqmcokcxflulpsku</code></p>
+<p>Must not be greater than 255 characters. Example: <code>wehihgijzkvndavrsmv</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>unit_availability</code></b>&nbsp;&nbsp;
@@ -1507,10 +1507,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="unit_price"                data-endpoint="POSTapi-product"
-               value="13"
+               value="62"
                data-component="body">
     <br>
-<p>This field is required when <code>unit_availability</code> is <code>true</code>. Must be at least 0. Example: <code>13</code></p>
+<p>This field is required when <code>unit_availability</code> is <code>true</code>. Must be at least 0. Example: <code>62</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>unit_discount_quantity</code></b>&nbsp;&nbsp;
@@ -1518,10 +1518,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="unit_discount_quantity"                data-endpoint="POSTapi-product"
-               value="6"
+               value="31"
                data-component="body">
     <br>
-<p>This field is required when <code>unit_availability</code> is <code>true</code>. Must be at least 1. Example: <code>6</code></p>
+<p>This field is required when <code>unit_availability</code> is <code>true</code>. Must be at least 1. Example: <code>31</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>unit_discount_price</code></b>&nbsp;&nbsp;
@@ -1529,10 +1529,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="unit_discount_price"                data-endpoint="POSTapi-product"
-               value="67"
+               value="73"
                data-component="body">
     <br>
-<p>This field is required when <code>unit_availability</code> is <code>true</code>. Must be at least 0. Example: <code>67</code></p>
+<p>This field is required when <code>unit_availability</code> is <code>true</code>. Must be at least 0. Example: <code>73</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>weight_availability</code></b>&nbsp;&nbsp;
@@ -1561,10 +1561,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="weight_price"                data-endpoint="POSTapi-product"
-               value="4"
+               value="26"
                data-component="body">
     <br>
-<p>This field is required when <code>weight_availability</code> is <code>true</code>. Must be at least 0. Example: <code>4</code></p>
+<p>This field is required when <code>weight_availability</code> is <code>true</code>. Must be at least 0. Example: <code>26</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>weight_discount_quantity</code></b>&nbsp;&nbsp;
@@ -1572,10 +1572,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="weight_discount_quantity"                data-endpoint="POSTapi-product"
-               value="79"
+               value="25"
                data-component="body">
     <br>
-<p>This field is required when <code>weight_availability</code> is <code>true</code>. Must be at least 1. Example: <code>79</code></p>
+<p>This field is required when <code>weight_availability</code> is <code>true</code>. Must be at least 1. Example: <code>25</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>weight_discount_price</code></b>&nbsp;&nbsp;
@@ -1583,10 +1583,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="weight_discount_price"                data-endpoint="POSTapi-product"
-               value="21"
+               value="18"
                data-component="body">
     <br>
-<p>This field is required when <code>weight_availability</code> is <code>true</code>. Must be at least 0. Example: <code>21</code></p>
+<p>This field is required when <code>weight_availability</code> is <code>true</code>. Must be at least 0. Example: <code>18</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>unit_name</code></b>&nbsp;&nbsp;
@@ -1594,10 +1594,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="unit_name"                data-endpoint="POSTapi-product"
-               value="rlrtwsdh"
+               value="ugrydjrurujuuujjluxh"
                data-component="body">
     <br>
-<p>This field is required when <code>unit_availability</code> is <code>true</code>. Must not be greater than 255 characters. Example: <code>rlrtwsdh</code></p>
+<p>This field is required when <code>unit_availability</code> is <code>true</code>. Must not be greater than 255 characters. Example: <code>ugrydjrurujuuujjluxh</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>is_available</code></b>&nbsp;&nbsp;
@@ -1626,10 +1626,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="category_id"                data-endpoint="POSTapi-product"
-               value="distinctio"
+               value="id"
                data-component="body">
     <br>
-<p>Example: <code>distinctio</code></p>
+<p>Example: <code>id</code></p>
         </div>
         </form>
 
@@ -1646,29 +1646,29 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://localhost/api/product/2" \
+    "https://condimentos.joel-uzcategui.com/api/product/2" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"name\": \"mcxgpxjjek\",
-    \"description\": \"Delectus aut placeat minus beatae.\",
-    \"image\": \"mdoryleuertvpziynta\",
+    \"name\": \"wej\",
+    \"description\": \"Consectetur sed nihil voluptatem fuga earum voluptatibus.\",
+    \"image\": \"cottjuznrkmnd\",
     \"unit_availability\": true,
-    \"unit_price\": 56,
-    \"unit_discount_quantity\": 60,
-    \"unit_discount_price\": 26,
+    \"unit_price\": 80,
+    \"unit_discount_quantity\": 47,
+    \"unit_discount_price\": 75,
     \"weight_availability\": false,
-    \"weight_price\": 68,
-    \"weight_discount_quantity\": 60,
-    \"weight_discount_price\": 79,
-    \"unit_name\": \"ihop\"
+    \"weight_price\": 82,
+    \"weight_discount_quantity\": 75,
+    \"weight_discount_price\": 89,
+    \"unit_name\": \"edlxjxqjwjbzaegxhle\"
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/product/2"
+    "https://condimentos.joel-uzcategui.com/api/product/2"
 );
 
 const headers = {
@@ -1677,18 +1677,18 @@ const headers = {
 };
 
 let body = {
-    "name": "mcxgpxjjek",
-    "description": "Delectus aut placeat minus beatae.",
-    "image": "mdoryleuertvpziynta",
+    "name": "wej",
+    "description": "Consectetur sed nihil voluptatem fuga earum voluptatibus.",
+    "image": "cottjuznrkmnd",
     "unit_availability": true,
-    "unit_price": 56,
-    "unit_discount_quantity": 60,
-    "unit_discount_price": 26,
+    "unit_price": 80,
+    "unit_discount_quantity": 47,
+    "unit_discount_price": 75,
     "weight_availability": false,
-    "weight_price": 68,
-    "weight_discount_quantity": 60,
-    "weight_discount_price": 79,
-    "unit_name": "ihop"
+    "weight_price": 82,
+    "weight_discount_quantity": 75,
+    "weight_discount_price": 89,
+    "unit_name": "edlxjxqjwjbzaegxhle"
 };
 
 fetch(url, {
@@ -1793,10 +1793,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="name"                data-endpoint="PUTapi-product--id-"
-               value="mcxgpxjjek"
+               value="wej"
                data-component="body">
     <br>
-<p>Must not be greater than 255 characters. Example: <code>mcxgpxjjek</code></p>
+<p>Must not be greater than 255 characters. Example: <code>wej</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>description</code></b>&nbsp;&nbsp;
@@ -1804,10 +1804,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="description"                data-endpoint="PUTapi-product--id-"
-               value="Delectus aut placeat minus beatae."
+               value="Consectetur sed nihil voluptatem fuga earum voluptatibus."
                data-component="body">
     <br>
-<p>Example: <code>Delectus aut placeat minus beatae.</code></p>
+<p>Example: <code>Consectetur sed nihil voluptatem fuga earum voluptatibus.</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>image</code></b>&nbsp;&nbsp;
@@ -1815,10 +1815,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="image"                data-endpoint="PUTapi-product--id-"
-               value="mdoryleuertvpziynta"
+               value="cottjuznrkmnd"
                data-component="body">
     <br>
-<p>Must not be greater than 255 characters. Example: <code>mdoryleuertvpziynta</code></p>
+<p>Must not be greater than 255 characters. Example: <code>cottjuznrkmnd</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>unit_availability</code></b>&nbsp;&nbsp;
@@ -1847,10 +1847,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="unit_price"                data-endpoint="PUTapi-product--id-"
-               value="56"
+               value="80"
                data-component="body">
     <br>
-<p>This field is required when <code>unit_availability</code> is <code>true</code>. Must be at least 0. Example: <code>56</code></p>
+<p>This field is required when <code>unit_availability</code> is <code>true</code>. Must be at least 0. Example: <code>80</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>unit_discount_quantity</code></b>&nbsp;&nbsp;
@@ -1858,10 +1858,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="unit_discount_quantity"                data-endpoint="PUTapi-product--id-"
-               value="60"
+               value="47"
                data-component="body">
     <br>
-<p>This field is required when <code>unit_availability</code> is <code>true</code>. Must be at least 1. Example: <code>60</code></p>
+<p>This field is required when <code>unit_availability</code> is <code>true</code>. Must be at least 1. Example: <code>47</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>unit_discount_price</code></b>&nbsp;&nbsp;
@@ -1869,10 +1869,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="unit_discount_price"                data-endpoint="PUTapi-product--id-"
-               value="26"
+               value="75"
                data-component="body">
     <br>
-<p>This field is required when <code>unit_availability</code> is <code>true</code>. Must be at least 0. Example: <code>26</code></p>
+<p>This field is required when <code>unit_availability</code> is <code>true</code>. Must be at least 0. Example: <code>75</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>weight_availability</code></b>&nbsp;&nbsp;
@@ -1901,10 +1901,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="weight_price"                data-endpoint="PUTapi-product--id-"
-               value="68"
+               value="82"
                data-component="body">
     <br>
-<p>This field is required when <code>weight_availability</code> is <code>true</code>. Must be at least 0. Example: <code>68</code></p>
+<p>This field is required when <code>weight_availability</code> is <code>true</code>. Must be at least 0. Example: <code>82</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>weight_discount_quantity</code></b>&nbsp;&nbsp;
@@ -1912,10 +1912,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="weight_discount_quantity"                data-endpoint="PUTapi-product--id-"
-               value="60"
+               value="75"
                data-component="body">
     <br>
-<p>This field is required when <code>weight_availability</code> is <code>true</code>. Must be at least 1. Example: <code>60</code></p>
+<p>This field is required when <code>weight_availability</code> is <code>true</code>. Must be at least 1. Example: <code>75</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>weight_discount_price</code></b>&nbsp;&nbsp;
@@ -1923,10 +1923,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="weight_discount_price"                data-endpoint="PUTapi-product--id-"
-               value="79"
+               value="89"
                data-component="body">
     <br>
-<p>This field is required when <code>weight_availability</code> is <code>true</code>. Must be at least 0. Example: <code>79</code></p>
+<p>This field is required when <code>weight_availability</code> is <code>true</code>. Must be at least 0. Example: <code>89</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>unit_name</code></b>&nbsp;&nbsp;
@@ -1934,10 +1934,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="unit_name"                data-endpoint="PUTapi-product--id-"
-               value="ihop"
+               value="edlxjxqjwjbzaegxhle"
                data-component="body">
     <br>
-<p>Must not be greater than 255 characters. Example: <code>ihop</code></p>
+<p>Must not be greater than 255 characters. Example: <code>edlxjxqjwjbzaegxhle</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>category_id</code></b>&nbsp;&nbsp;
@@ -1965,14 +1965,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost/api/product/2" \
+    "https://condimentos.joel-uzcategui.com/api/product/2" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/product/2"
+    "https://condimentos.joel-uzcategui.com/api/product/2"
 );
 
 const headers = {

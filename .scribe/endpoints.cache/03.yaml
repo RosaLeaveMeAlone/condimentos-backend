@@ -115,7 +115,7 @@ endpoints:
         name: product_id
         description: ''
         required: true
-        example: 14
+        example: 13
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -124,7 +124,7 @@ endpoints:
         name: quantity
         description: ''
         required: true
-        example: 1.53273
+        example: 220520154.43386
         type: number
         enumValues: []
         exampleWasSpecified: false
@@ -133,15 +133,15 @@ endpoints:
         name: is_unit
         description: ''
         required: true
-        example: true
+        example: false
         type: boolean
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      product_id: 14
-      quantity: 1.53273
-      is_unit: true
+      product_id: 13
+      quantity: 220520154.43386
+      is_unit: false
     fileParameters: []
     responses: []
     responseFields: []

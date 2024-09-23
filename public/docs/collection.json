@@ -5,12 +5,12 @@
             "key": "baseUrl",
             "type": "string",
             "name": "string",
-            "value": "http:\/\/localhost"
+            "value": "https:\/\/condimentos.joel-uzcategui.com"
         }
     ],
     "info": {
         "name": "Laravel",
-        "_postman_id": "dd099925-2f71-49e0-abff-d56f0d634a9e",
+        "_postman_id": "778bebf5-5906-4b2b-ba5f-966f35843610",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -41,7 +41,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"non\",\"password\":\"aut\"}"
+                            "raw": "{\"email\":\"et\",\"password\":\"expedita\"}"
                         },
                         "description": "Check that the service is up. If everything is okay, you'll get a 200 OK response.\n\nOtherwise, the request will fail with a 400 error, and a response listing the failed services.",
                         "auth": {
@@ -162,7 +162,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"product_id\":14,\"quantity\":1.53273,\"is_unit\":true}"
+                            "raw": "{\"product_id\":13,\"quantity\":220520154.43385866,\"is_unit\":false}"
                         },
                         "description": "Add a product to cart.",
                         "auth": {
@@ -281,7 +281,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"category_id\":\"nam\"}"
+                            "raw": "{\"category_id\":\"placeat\"}"
                         },
                         "description": "List products with pagination",
                         "auth": {
@@ -388,7 +388,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"fot\",\"description\":\"Qui facere et harum quo accusamus officiis et.\",\"image\":\"jyestftspzqmcokcxflulpsku\",\"unit_availability\":true,\"unit_price\":13,\"unit_discount_quantity\":6,\"unit_discount_price\":67,\"weight_availability\":false,\"weight_price\":4,\"weight_discount_quantity\":79,\"weight_discount_price\":21,\"unit_name\":\"rlrtwsdh\",\"is_available\":false,\"category_id\":\"distinctio\"}"
+                            "raw": "{\"name\":\"oljmcbpnbyufwburrgxk\",\"description\":\"Reiciendis explicabo laboriosam numquam incidunt.\",\"image\":\"wehihgijzkvndavrsmv\",\"unit_availability\":true,\"unit_price\":62,\"unit_discount_quantity\":31,\"unit_discount_price\":73,\"weight_availability\":false,\"weight_price\":26,\"weight_discount_quantity\":25,\"weight_discount_price\":18,\"unit_name\":\"ugrydjrurujuuujjluxh\",\"is_available\":false,\"category_id\":\"id\"}"
                         },
                         "description": "",
                         "auth": {
@@ -427,7 +427,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"mcxgpxjjek\",\"description\":\"Delectus aut placeat minus beatae.\",\"image\":\"mdoryleuertvpziynta\",\"unit_availability\":true,\"unit_price\":56,\"unit_discount_quantity\":60,\"unit_discount_price\":26,\"weight_availability\":false,\"weight_price\":68,\"weight_discount_quantity\":60,\"weight_discount_price\":79,\"unit_name\":\"ihop\"}"
+                            "raw": "{\"name\":\"wej\",\"description\":\"Consectetur sed nihil voluptatem fuga earum voluptatibus.\",\"image\":\"cottjuznrkmnd\",\"unit_availability\":true,\"unit_price\":80,\"unit_discount_quantity\":47,\"unit_discount_price\":75,\"weight_availability\":false,\"weight_price\":82,\"weight_discount_quantity\":75,\"weight_discount_price\":89,\"unit_name\":\"edlxjxqjwjbzaegxhle\"}"
                         },
                         "description": "",
                         "auth": {
