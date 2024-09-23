@@ -9,10 +9,17 @@ use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
+/**
+ * @group Product management
+ *
+ * APIs for managing product
+ */
 class ProductController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * List products
+     * 
+     * List products with pagination
      */
     public function index(Request $request)
     {
@@ -42,7 +49,7 @@ class ProductController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Create Product
      */
     public function store(StoreProductRequest $request)
     {
@@ -55,7 +62,7 @@ class ProductController extends Controller
     }
 
     /**
-     * Display the specified resource.
+     * Show Product
      */
     public function show(Product $product)
     {
@@ -66,7 +73,7 @@ class ProductController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
+     * Update Product
      */
     public function update(UpdateProductRequest $request, Product $product)
     {
@@ -79,7 +86,7 @@ class ProductController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Delete Product
      */
     public function destroy(Product $product)
     {

@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Laravel",
-        "_postman_id": "4e0bb5ed-05ac-49e0-95d8-9cdfd183aa2c",
+        "_postman_id": "dd099925-2f71-49e0-abff-d56f0d634a9e",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -41,30 +41,172 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"dolorem\",\"password\":\"hic\"}"
+                            "raw": "{\"email\":\"non\",\"password\":\"aut\"}"
                         },
                         "description": "Check that the service is up. If everything is okay, you'll get a 200 OK response.\n\nOtherwise, the request will fail with a 400 error, and a response listing the failed services.",
                         "auth": {
                             "type": "noauth"
                         }
                     },
-                    "response": [
-                        {
-                            "header": [],
-                            "code": 400,
-                            "body": "{\"status\": \"down\", \"services\": {\"database\": \"up\", \"redis\": \"down\"}}",
-                            "name": "Service is unhealthy"
-                        }
-                    ]
+                    "response": []
                 }
             ]
         },
         {
-            "name": "Endpoints",
-            "description": "",
+            "name": "Cart management",
+            "description": "\nAPIs for managing cart",
             "item": [
                 {
-                    "name": "Display a listing of the resource.",
+                    "name": "New cart",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/cart",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/cart"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Show Cart \/ Checkout information",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/cart\/:token",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/cart\/:token",
+                            "variable": [
+                                {
+                                    "id": "token",
+                                    "key": "token",
+                                    "value": "0b3c9250-06e8-487f-bc6d-7b4a67f830cb",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"data\":{\"token\":\"0b3c9250-06e8-487f-bc6d-7b4a67f830cb\",\"products_quantity\":2,\"total\":16.59,\"products\":[{\"id\":2,\"name\":\"Sample Product 2\",\"quantity\":\"1.00\",\"total\":15.99},{\"id\":3,\"name\":\"Sample Product 22\",\"quantity\":\"0.10\",\"total\":4.99}]}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Add Product",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/cart\/add-product",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/cart\/add-product"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"product_id\":14,\"quantity\":1.53273,\"is_unit\":true}"
+                        },
+                        "description": "Add a product to cart.",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Close Cart",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/cart\/close-cart",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/cart\/close-cart"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Category management",
+            "description": "\nAPIs for managing category",
+            "item": [
+                {
+                    "name": "List Categories",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -110,9 +252,15 @@
                             "name": ""
                         }
                     ]
-                },
+                }
+            ]
+        },
+        {
+            "name": "Product management",
+            "description": "\nAPIs for managing product",
+            "item": [
                 {
-                    "name": "Display a listing of the resource.",
+                    "name": "List products",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -133,9 +281,9 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"category_id\":\"itaque\"}"
+                            "raw": "{\"category_id\":\"nam\"}"
                         },
-                        "description": "",
+                        "description": "List products with pagination",
                         "auth": {
                             "type": "noauth"
                         }
@@ -163,7 +311,7 @@
                     ]
                 },
                 {
-                    "name": "Display the specified resource.",
+                    "name": "Show Product",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -219,7 +367,7 @@
                     ]
                 },
                 {
-                    "name": "Store a newly created resource in storage.",
+                    "name": "Create Product",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -240,7 +388,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"nu\",\"description\":\"Sequi voluptatem non sit sed est saepe.\",\"image\":\"egrwhjzdolxdvfxudvfrjqlmw\",\"unit_availability\":true,\"unit_price\":42,\"unit_discount_quantity\":68,\"unit_discount_price\":47,\"weight_availability\":true,\"weight_price\":22,\"weight_discount_quantity\":11,\"weight_discount_price\":35,\"unit_name\":\"jzkmtedxuolx\",\"is_available\":false,\"category_id\":\"quos\"}"
+                            "raw": "{\"name\":\"fot\",\"description\":\"Qui facere et harum quo accusamus officiis et.\",\"image\":\"jyestftspzqmcokcxflulpsku\",\"unit_availability\":true,\"unit_price\":13,\"unit_discount_quantity\":6,\"unit_discount_price\":67,\"weight_availability\":false,\"weight_price\":4,\"weight_discount_quantity\":79,\"weight_discount_price\":21,\"unit_name\":\"rlrtwsdh\",\"is_available\":false,\"category_id\":\"distinctio\"}"
                         },
                         "description": "",
                         "auth": {
@@ -250,7 +398,7 @@
                     "response": []
                 },
                 {
-                    "name": "Update the specified resource in storage.",
+                    "name": "Update Product",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -279,7 +427,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"oirfmxgmsrwcd\",\"description\":\"Minus rem cumque quo dolor inventore cupiditate rerum in.\",\"image\":\"ppxuyxmwjqyaz\",\"unit_availability\":true,\"unit_price\":1,\"unit_discount_quantity\":74,\"unit_discount_price\":26,\"weight_availability\":false,\"weight_price\":86,\"weight_discount_quantity\":73,\"weight_discount_price\":79,\"unit_name\":\"efyhvslbkzr\"}"
+                            "raw": "{\"name\":\"mcxgpxjjek\",\"description\":\"Delectus aut placeat minus beatae.\",\"image\":\"mdoryleuertvpziynta\",\"unit_availability\":true,\"unit_price\":56,\"unit_discount_quantity\":60,\"unit_discount_price\":26,\"weight_availability\":false,\"weight_price\":68,\"weight_discount_quantity\":60,\"weight_discount_price\":79,\"unit_name\":\"ihop\"}"
                         },
                         "description": "",
                         "auth": {
@@ -289,7 +437,7 @@
                     "response": []
                 },
                 {
-                    "name": "Remove the specified resource from storage.",
+                    "name": "Delete Product",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -323,169 +471,6 @@
                         }
                     },
                     "response": []
-                },
-                {
-                    "name": "Store a newly created resource in storage.",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/cart",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/cart"
-                        },
-                        "method": "POST",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": []
-                },
-                {
-                    "name": "Display the specified resource.",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/cart\/:token",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/cart\/:token",
-                            "variable": [
-                                {
-                                    "id": "token",
-                                    "key": "token",
-                                    "value": "0b3c9250-06e8-487f-bc6d-7b4a67f830cb",
-                                    "description": ""
-                                }
-                            ]
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "access-control-allow-origin",
-                                    "value": "*"
-                                }
-                            ],
-                            "code": 200,
-                            "body": "{\"data\":{\"token\":\"0b3c9250-06e8-487f-bc6d-7b4a67f830cb\",\"products_quantity\":2,\"total\":20.98,\"products\":[{\"id\":2,\"name\":\"Sample Product 2\",\"quantity\":\"1.00\",\"total\":15.99},{\"id\":3,\"name\":\"Sample Product 22\",\"quantity\":\"1.00\",\"total\":4.99}]}}",
-                            "name": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "POST api\/cart\/add-product",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/cart\/add-product",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/cart\/add-product"
-                        },
-                        "method": "POST",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": {
-                            "mode": "raw",
-                            "raw": "{\"product_id\":19,\"quantity\":18174.9696,\"is_unit\":false}"
-                        },
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": []
-                },
-                {
-                    "name": "GET api\/test",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/test",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/test"
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "content-type",
-                                    "value": "text\/html; charset=UTF-8"
-                                },
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "access-control-allow-origin",
-                                    "value": "*"
-                                }
-                            ],
-                            "code": 200,
-                            "body": "",
-                            "name": ""
-                        }
-                    ]
                 }
             ]
         }

@@ -21,7 +21,6 @@ class CartService
     {
         $total = 0;
         foreach ($products as $product) {
-            // dd($product->pivot);
             $total += self::getProductTotal($product);
         }
 
@@ -33,11 +32,9 @@ class CartService
         if (! $quantity) {
             $quantity = $product->pivot->quantity;
         }
-        // dd($quantity);
 
         $amount = 0;
 
-        // dd($product->id);
         if ($product->pivot->is_unit) {
             if (!$product->unit_availability) {
                 Log::error('Product unit is not available but is_unit is set (true).', [

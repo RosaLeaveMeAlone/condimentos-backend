@@ -23,12 +23,11 @@ Route::middleware('auth:sanctum')->group(function () {
 
 Route::apiResource('cart', CartController::class)->only(['show','store']);
 Route::controller(CartController::class)->prefix('cart')->group(function() {
-    // Route::get('/', 'getCart');
     Route::middleware([SetCart::class])->post('/add-product', 'addProduct');
+    Route::middleware([SetCart::class])->post('/close-cart', 'closeCart');
 });
 
-Route::get('/test', function() {
-    echo "test";
-});
+// Route::get('/test', function() {
+//     echo "test";
+// });
 
-//TODO: ->middleware('auth:sanctum')

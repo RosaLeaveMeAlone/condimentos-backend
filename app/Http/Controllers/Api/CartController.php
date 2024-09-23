@@ -4,15 +4,18 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Cart\AddProductToCartRequest;
-use App\Http\Requests\Cart\GetCartRequest;
+use Illuminate\Http\Request;
 use App\Models\Cart;
-use App\Http\Requests\Cart\StoreCartRequest;
 use App\Http\Requests\Cart\UpdateCartRequest;
 use App\Http\Services\CartService;
 use App\Models\CartProduct;
 use App\Models\Product;
 
-//TODO: Recordar calcular el monto en base a precios de oferta tambien
+/**
+ * @group Cart management
+ *
+ * APIs for managing cart
+ */
 class CartController extends Controller
 {
 
@@ -21,6 +24,11 @@ class CartController extends Controller
     )
     {}
 
+    /**
+     * Add Product
+     *
+     * Add a product to cart.
+     */
     public function addProduct(AddProductToCartRequest $request)
     {
         $product = Product::findOrFail($request->product_id);
@@ -59,9 +67,12 @@ class CartController extends Controller
         ]);
     }
 
-    public function closeCart(Cart $cart)
+    /**
+     * Close Cart
+     */
+    public function closeCart(Request $request)
     {
-        $cart->update([
+        $request->cart->update([
             'is_closed' => true, // this is usefull?
         ]);
 
@@ -79,7 +90,7 @@ class CartController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     * New cart
      */
     public function store()
     {
@@ -100,7 +111,7 @@ class CartController extends Controller
     }
 
     /**
-     * Display the specified resource.
+     * Show Cart / Checkout information
      */
     public function show(Cart $cart)
     {
@@ -116,7 +127,6 @@ class CartController extends Controller
         $total = $this->cartService->getTotal($products);
 
         $formattedProducts = $products->map(function ($product) {
-            // Calcula el total para este producto (asume que ya tienes una función para esto)
             $total = $this->cartService->getProductTotal($product,1);
             
             return [
@@ -139,7 +149,7 @@ class CartController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateCartRequest $request, Cart $cart)
+    public function update(Request $request, Cart $cart)
     {
         //
     }

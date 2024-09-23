@@ -1,0 +1,496 @@
+name: 'Product management'
+description: |-
+
+  APIs for managing product
+endpoints:
+  -
+    httpMethods:
+      - GET
+    uri: api/product
+    metadata:
+      groupName: 'Product management'
+      groupDescription: |-
+
+        APIs for managing product
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'List products'
+      description: 'List products with pagination'
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      category_id:
+        name: category_id
+        description: ''
+        required: false
+        example: nam
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      category_id: nam
+    fileParameters: []
+    responses:
+      -
+        status: 500
+        content: |-
+          {
+              "message": "Server Error"
+          }
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/product/{id}'
+    metadata:
+      groupName: 'Product management'
+      groupDescription: |-
+
+        APIs for managing product
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Show Product'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the product.'
+        required: true
+        example: 2
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      id: 2
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"data":{"id":2,"name":"Sample Product 2","description":"This is a sample product description.","image":"joel-uzcategui.com","unit_availability":true,"unit_price":"19.99","unit_discount_quantity":1,"unit_discount_price":"15.99","weight_availability":true,"weight_price":"5.99","weight_discount_quantity":5,"weight_discount_price":"4.99","unit_name":"piece","is_available":true,"category_id":1,"created_at":"2024-09-17T17:57:55.000000Z","updated_at":"2024-09-17T17:57:55.000000Z","deleted_at":null,"category":{"id":1,"name":"Condimentos","created_at":null,"updated_at":null,"deleted_at":null}}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/product
+    metadata:
+      groupName: 'Product management'
+      groupDescription: |-
+
+        APIs for managing product
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Create Product'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: fot
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      description:
+        name: description
+        description: ''
+        required: false
+        example: 'Qui facere et harum quo accusamus officiis et.'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      image:
+        name: image
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: jyestftspzqmcokcxflulpsku
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      unit_availability:
+        name: unit_availability
+        description: ''
+        required: true
+        example: true
+        type: boolean
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      unit_price:
+        name: unit_price
+        description: 'This field is required when <code>unit_availability</code> is <code>true</code>. Must be at least 0.'
+        required: false
+        example: 13
+        type: number
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      unit_discount_quantity:
+        name: unit_discount_quantity
+        description: 'This field is required when <code>unit_availability</code> is <code>true</code>. Must be at least 1.'
+        required: false
+        example: 6
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      unit_discount_price:
+        name: unit_discount_price
+        description: 'This field is required when <code>unit_availability</code> is <code>true</code>. Must be at least 0.'
+        required: false
+        example: 67
+        type: number
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      weight_availability:
+        name: weight_availability
+        description: ''
+        required: true
+        example: false
+        type: boolean
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      weight_price:
+        name: weight_price
+        description: 'This field is required when <code>weight_availability</code> is <code>true</code>. Must be at least 0.'
+        required: false
+        example: 4
+        type: number
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      weight_discount_quantity:
+        name: weight_discount_quantity
+        description: 'This field is required when <code>weight_availability</code> is <code>true</code>. Must be at least 1.'
+        required: false
+        example: 79
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      weight_discount_price:
+        name: weight_discount_price
+        description: 'This field is required when <code>weight_availability</code> is <code>true</code>. Must be at least 0.'
+        required: false
+        example: 21
+        type: number
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      unit_name:
+        name: unit_name
+        description: 'This field is required when <code>unit_availability</code> is <code>true</code>. Must not be greater than 255 characters.'
+        required: false
+        example: rlrtwsdh
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      is_available:
+        name: is_available
+        description: ''
+        required: true
+        example: false
+        type: boolean
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      category_id:
+        name: category_id
+        description: ''
+        required: true
+        example: distinctio
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      name: fot
+      description: 'Qui facere et harum quo accusamus officiis et.'
+      image: jyestftspzqmcokcxflulpsku
+      unit_availability: true
+      unit_price: 13
+      unit_discount_quantity: 6
+      unit_discount_price: 67
+      weight_availability: false
+      weight_price: 4
+      weight_discount_quantity: 79
+      weight_discount_price: 21
+      unit_name: rlrtwsdh
+      is_available: false
+      category_id: distinctio
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+      - PATCH
+    uri: 'api/product/{id}'
+    metadata:
+      groupName: 'Product management'
+      groupDescription: |-
+
+        APIs for managing product
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Update Product'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the product.'
+        required: true
+        example: 2
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      id: 2
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: 'Must not be greater than 255 characters.'
+        required: false
+        example: mcxgpxjjek
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      description:
+        name: description
+        description: ''
+        required: false
+        example: 'Delectus aut placeat minus beatae.'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      image:
+        name: image
+        description: 'Must not be greater than 255 characters.'
+        required: false
+        example: mdoryleuertvpziynta
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      unit_availability:
+        name: unit_availability
+        description: ''
+        required: true
+        example: true
+        type: boolean
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      unit_price:
+        name: unit_price
+        description: 'This field is required when <code>unit_availability</code> is <code>true</code>. Must be at least 0.'
+        required: false
+        example: 56
+        type: number
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      unit_discount_quantity:
+        name: unit_discount_quantity
+        description: 'This field is required when <code>unit_availability</code> is <code>true</code>. Must be at least 1.'
+        required: false
+        example: 60
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      unit_discount_price:
+        name: unit_discount_price
+        description: 'This field is required when <code>unit_availability</code> is <code>true</code>. Must be at least 0.'
+        required: false
+        example: 26
+        type: number
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      weight_availability:
+        name: weight_availability
+        description: ''
+        required: true
+        example: false
+        type: boolean
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      weight_price:
+        name: weight_price
+        description: 'This field is required when <code>weight_availability</code> is <code>true</code>. Must be at least 0.'
+        required: false
+        example: 68
+        type: number
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      weight_discount_quantity:
+        name: weight_discount_quantity
+        description: 'This field is required when <code>weight_availability</code> is <code>true</code>. Must be at least 1.'
+        required: false
+        example: 60
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      weight_discount_price:
+        name: weight_discount_price
+        description: 'This field is required when <code>weight_availability</code> is <code>true</code>. Must be at least 0.'
+        required: false
+        example: 79
+        type: number
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      unit_name:
+        name: unit_name
+        description: 'Must not be greater than 255 characters.'
+        required: false
+        example: ihop
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      category_id:
+        name: category_id
+        description: ''
+        required: false
+        example: null
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      name: mcxgpxjjek
+      description: 'Delectus aut placeat minus beatae.'
+      image: mdoryleuertvpziynta
+      unit_availability: true
+      unit_price: 56
+      unit_discount_quantity: 60
+      unit_discount_price: 26
+      weight_availability: false
+      weight_price: 68
+      weight_discount_quantity: 60
+      weight_discount_price: 79
+      unit_name: ihop
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/product/{id}'
+    metadata:
+      groupName: 'Product management'
+      groupDescription: |-
+
+        APIs for managing product
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Delete Product'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the product.'
+        required: true
+        example: 2
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      id: 2
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
