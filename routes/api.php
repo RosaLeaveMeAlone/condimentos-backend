@@ -27,7 +27,7 @@ Route::controller(CartController::class)->prefix('cart')->group(function() {
     Route::middleware([SetCart::class])->post('/close-cart', 'closeCart');
 });
 
-// Route::get('/test', function() {
-//     echo "test";
-// });
+Route::get('/test', function() {
+    echo "Commit hecho desde Twistic";
+});
 
